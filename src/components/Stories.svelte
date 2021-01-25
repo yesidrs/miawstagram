@@ -20,6 +20,7 @@
           font-size: 12px;
           font-weight: normal;
           color: black;
+          cursor: pointer;
         }
       }
 
@@ -72,15 +73,20 @@
       <span>Ver todas</span>
     </div>
     <div class="items">
-      <div class="item">
-        <div class="item-box">
-          <img src="/img/profile.jpg" alt="profile" />
+      {#each Array(3) as _, i}
+        <div class="item">
+          <div class="item-box">
+            <img
+              src={`https://arepa.s3.amazonaws.com/elmo00${i + 2}.jpg`}
+              alt="profile"
+            />
+          </div>
+          <h2> 
+            nickname{i === 0 ? 1 : i + 1}
+            <span>{`${Math.floor(Math.random() * (10 - i + i)) + i} horas antes`}</span>
+          </h2>
         </div>
-        <h2>
-          Entwickler
-          <span>10 horas antes</span>
-        </h2>
-      </div>
+      {/each}
     </div>
   </div>
 </div>

@@ -67,7 +67,7 @@
   <div class="container">
     <div class="content">
       <div class="logo">
-        <h1>Pugstagram</h1>
+        <h1>Miaustagram</h1>
       </div>
       <div class="nav">
         <ul>

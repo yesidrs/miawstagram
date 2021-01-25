@@ -1,5 +1,7 @@
 <script>
   import Comments from './Comments.svelte';
+
+  export let post;
 </script>
 
 <style lang="scss">
@@ -143,16 +145,16 @@
   <div class="container">
     <div class="header">
       <div class="user">
-        <img src="/img/elmo.jpg" alt="" />
+        <img src={post.avatar} alt="" />
         <div class="info">
-          <h2>Elmo.pug</h2>
-          <span>Medellín, Colombia</span>
+          <h2>{post.username}</h2>
+          <span>{post.location}</span>
         </div>
       </div>
       <div class="settings"><i class="fa fa-ellipsis-h" /></div>
     </div>
     <div class="photo">
-      <figure><img src="/img/elmo.jpg" alt="" /></figure>
+      <figure><img src={post.photo} alt="" /></figure>
     </div>
     <div class="icons">
       <div class="icons-first">
@@ -164,9 +166,9 @@
       </div>
     </div>
     <div class="description">
-      <h3>Elmo.pug</h3>
-      <span>Hola!</span>
+      <h3>{post.username}</h3>
+      <span>{post.postComment}</span>
     </div>
-    <Comments />
+    <Comments comments={post.comments}/>
   </div>
 </div>

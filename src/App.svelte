@@ -3,13 +3,16 @@
   import Main from './components/Main.svelte';
   import TimeLine from './components/TimeLine.svelte';
   import Sidebar from './components/Sidebar.svelte';
-</script>
+  import { onMount } from 'svelte';
 
-<Header />
-<Main>
-  <TimeLine />
-  <Sidebar />
-</Main>
+  let data = {};
+  const API = 'https://kittygram-api.now.sh/';
+
+  onMount(async () => {
+    const response = await fetch(API);
+    data = await response.json();
+  });
+</script>
 
 <style lang="scss">
   @import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400&family=Pacifico&display=swap');
@@ -24,3 +27,9 @@
     }
   }
 </style>
+
+<Header />
+<Main>
+  <TimeLine posts={data.posts}/>
+  <Sidebar />
+</Main>
