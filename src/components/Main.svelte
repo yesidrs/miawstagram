@@ -1,9 +1,3 @@
-<div class="main">
-  <div class="container">
-    <slot />
-  </div>
-</div>
-
 <style lang="scss">
   .main {
     display: grid;
@@ -19,3 +13,9 @@
     }
   }
 </style>
+
+<div class="main">
+  <div class="container">
+    <slot />
+  </div>
+</div>

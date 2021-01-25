@@ -1,19 +1,3 @@
-<div class="header">
-  <div class="container">
-    <div class="content">
-      <div class="logo">
-        <h1>Pugstagram</h1>
-      </div>
-      <div class="nav">
-        <ul>
-          <li><i class="fas fa-heart" /></li>
-          <li><i class="fas fa-user-alt" /></li>
-        </ul>
-      </div>
-    </div>
-  </div>
-</div>
-
 <style lang="scss">
   .header {
     background-color: white;
@@ -78,3 +62,19 @@
     }
   }
 </style>
+
+<div class="header">
+  <div class="container">
+    <div class="content">
+      <div class="logo">
+        <h1>Pugstagram</h1>
+      </div>
+      <div class="nav">
+        <ul>
+          <li><i class="fas fa-heart" /></li>
+          <li><i class="fas fa-user-alt" /></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>

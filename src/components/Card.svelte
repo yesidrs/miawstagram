@@ -2,38 +2,6 @@
   import Comments from './Comments.svelte';
 </script>
 
-<div class="card">
-  <div class="container">
-    <div class="header">
-      <div class="user">
-        <img src="/img/elmo.jpg" alt="" />
-        <div class="info">
-          <h2>Elmo.pug</h2>
-          <span>Medellín, Colombia</span>
-        </div>
-      </div>
-      <div class="settings"><i class="fa fa-ellipsis-h" /></div>
-    </div>
-    <div class="photo">
-      <figure><img src="/img/elmo.jpg" alt="" /></figure>
-    </div>
-    <div class="icons">
-      <div class="icons-first">
-        <i class="fa fa-heart" />
-        <i class="fa fa-paper-plane" />
-      </div>
-      <div class="icons-second">
-        <i class="fa fa-bookmark" />
-      </div>
-    </div>
-    <div class="description">
-      <h3>Elmo.pug</h3>
-      <span>Hola!</span>
-    </div>
-    <Comments />
-  </div>
-</div>
-
 <style lang="scss">
   .card {
     border: 1px solid rgba(219, 219, 219, 1);
@@ -170,3 +138,35 @@
     }
   }
 </style>
+
+<div class="card">
+  <div class="container">
+    <div class="header">
+      <div class="user">
+        <img src="/img/elmo.jpg" alt="" />
+        <div class="info">
+          <h2>Elmo.pug</h2>
+          <span>Medellín, Colombia</span>
+        </div>
+      </div>
+      <div class="settings"><i class="fa fa-ellipsis-h" /></div>
+    </div>
+    <div class="photo">
+      <figure><img src="/img/elmo.jpg" alt="" /></figure>
+    </div>
+    <div class="icons">
+      <div class="icons-first">
+        <i class="fa fa-heart" />
+        <i class="fa fa-paper-plane" />
+      </div>
+      <div class="icons-second">
+        <i class="fa fa-bookmark" />
+      </div>
+    </div>
+    <div class="description">
+      <h3>Elmo.pug</h3>
+      <span>Hola!</span>
+    </div>
+    <Comments />
+  </div>
+</div>

@@ -4,14 +4,6 @@
   import Footer from './Footer.svelte';
 </script>
 
-<div class="sidebar">
-  <div class="container">
-    <Profile />
-    <Stories />
-    <Footer />
-  </div>
-</div>
-
 <style lang="scss">
   .sidebar {
     position: relative;
@@ -22,3 +14,11 @@
     }
   }
 </style>
+
+<div class="sidebar">
+  <div class="container">
+    <Profile />
+    <Stories />
+    <Footer />
+  </div>
+</div>

@@ -1,23 +1,3 @@
-<div class="stories">
-  <div class="container">
-    <div class="head">
-      <h2>Historias</h2>
-      <span>Ver todas</span>
-    </div>
-    <div class="items">
-      <div class="item">
-        <div class="item-box">
-          <img src="/img/profile.jpg" alt="profile" />
-        </div>
-        <h2>
-          Entwickler
-          <span>10 horas antes</span>
-        </h2>
-      </div>
-    </div>
-  </div>
-</div>
-
 <style lang="scss">
   .stories {
     border: 1px solid rgba(219, 219, 219, 1);
@@ -68,7 +48,7 @@
               color: gray;
             }
           }
-         
+
           .item-box {
             width: 32px;
             height: 32px;
@@ -84,3 +64,23 @@
     }
   }
 </style>
+
+<div class="stories">
+  <div class="container">
+    <div class="head">
+      <h2>Historias</h2>
+      <span>Ver todas</span>
+    </div>
+    <div class="items">
+      <div class="item">
+        <div class="item-box">
+          <img src="/img/profile.jpg" alt="profile" />
+        </div>
+        <h2>
+          Entwickler
+          <span>10 horas antes</span>
+        </h2>
+      </div>
+    </div>
+  </div>
+</div>
