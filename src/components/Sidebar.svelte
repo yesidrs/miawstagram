@@ -11,3 +11,14 @@
     <Footer />
   </div>
 </div>
+
+<style lang="scss">
+  .sidebar {
+    position: relative;
+    padding: 4.5em 0 0 0;
+
+    .container {
+      position: fixed;
+    }
+  }
+</style>
