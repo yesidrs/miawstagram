@@ -1,3 +1,23 @@
+<script>
+  export let comments = [];
+
+  const addComment = (e) => {
+    const msg = e.target.text.value;
+    const min = 3;
+
+    if (msg.length > min) {
+      const message = {
+        id: Date.now(),
+        text: msg,
+        username: 'Entwickler'
+      }
+
+      comments = [...comments, message];
+      e.target.text.value = '';
+    }
+  }
+</script>
+
 <style lang="scss">
   .comments {
     .content {
@@ -54,12 +74,14 @@
 
 <div class="comments">
   <div class="content">
-    <div class="users">
-      <h3>El Firulais</h3>
-      <span>Hola Elmo</span>
-    </div>
+    {#each comments as comment}
+      <div class="users">
+        <h3>{comment.username}</h3>
+        <span>{comment.text}</span>
+      </div>
+    {/each}
     <div class="add">
-      <form>
+      <form on:submit|preventDefault={addComment} >
         <input type="text" id="text" placeholder="Agregar Comentario..." />
         <button type="submit">Post</button>
       </form>
