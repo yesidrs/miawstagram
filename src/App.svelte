@@ -18,7 +18,6 @@
   @import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400&family=Pacifico&display=swap');
 
   :global(body) {
-    background-color: #fafafa;
     color: rgba(38, 38, 38, 0.7);
     font-family: 'Lato', sans-serif;
 
@@ -26,6 +25,12 @@
       margin: 0;
     }
   }
+
+  :global(.dark-mode) {
+    background-color: #1d3040 !important;
+    color: #bfc2c7;
+  }
+
 </style>
 
 <Header />

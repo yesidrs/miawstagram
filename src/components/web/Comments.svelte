@@ -82,7 +82,7 @@
     {/each}
     <div class="add">
       <form on:submit|preventDefault={addComment} >
-        <input type="text" id="text" placeholder="Agregar Comentario..." />
+        <input type="text" name="text" placeholder="Agregar Comentario..." />
         <button type="submit">Post</button>
       </form>
     </div>

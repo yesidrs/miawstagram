@@ -48,7 +48,7 @@
     <i class="fas fa-times-circle" on:click/>
   </div>
   <div class="content">
-    <a href="https://www.facebook.com/sharer.php?&u=https://miaustagram.co">
+    <a href="https://www.facebook.com/sharer.php?&u=https://miawstagram.co">
       <i class="fab fa-facebook-square" />
       Compartir en Facebook
     </a>

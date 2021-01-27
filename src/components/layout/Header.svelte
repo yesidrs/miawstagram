@@ -9,7 +9,7 @@ import ThemeButton from "../utils/ThemeButton.svelte";
     position: fixed;
     width: 100%;
 
-    .container {
+    .header-container {
       grid-template-columns: minmax(auto, 936px);
       display: grid;
       justify-content: center;
@@ -52,10 +52,15 @@ import ThemeButton from "../utils/ThemeButton.svelte";
         .nav {
           ul {
             list-style: none;
+            margin: 0;
+            display: flex;
+            align-items: center;
+
             li {
               display: inline-block;
               margin: 0 0 0 1em;
             }
+
             i {
               font-size: 16px;
               color: rgba(38, 38, 38, 0.7);
@@ -69,10 +74,10 @@ import ThemeButton from "../utils/ThemeButton.svelte";
 </style>
 
 <div class="header">
-  <div class="container">
+  <div class="header-container">
     <div class="content">
       <div class="logo">
-        <h1>Miaustagram</h1>
+        <h1>Miawstagram</h1>
       </div>
       <div class="nav">
         <ul>
