@@ -18,6 +18,7 @@
     border-radius: 4px;
     background-color: white;
     margin: 0 0 2em 0;
+    transition: 0.5s;
 
     .container {
       .header {

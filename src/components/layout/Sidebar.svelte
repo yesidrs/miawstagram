@@ -6,17 +6,16 @@
 
 <style lang="scss">
   .sidebar {
-    position: relative;
     margin: 4.5em 0 0 0;
 
-    .container {
+    .sidebar-container {
       position: fixed;
     }
   }
 </style>
 
 <div class="sidebar">
-  <div class="container">
+  <div class="sidebar-container">
     <Profile />
     <Stories />
     <Footer />

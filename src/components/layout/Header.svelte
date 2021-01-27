@@ -1,8 +1,7 @@
 <script>
-
-import ThemeButton from "../utils/ThemeButton.svelte";
-
+  import ThemeButton from '../utils/ThemeButton.svelte';
 </script>
+
 <style lang="scss">
   .header {
     background-color: white;
@@ -14,7 +13,8 @@ import ThemeButton from "../utils/ThemeButton.svelte";
       display: grid;
       justify-content: center;
       background-color: white;
-      border-bottom: 1px solid rgba(38, 38, 38, 0.4);
+      box-shadow: 0px 8px 15px -9px rgba(0,0,0,0.2);;
+      transition: 0.5s;
 
       .content {
         display: flex;
@@ -27,7 +27,7 @@ import ThemeButton from "../utils/ThemeButton.svelte";
             padding: 0;
             margin: 0;
             font-size: 28px;
-            color: black;
+            color: #be1d84;
             font-family: 'Pacifico', cursive;
             cursor: pointer;
             position: relative;

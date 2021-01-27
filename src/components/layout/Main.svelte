@@ -4,6 +4,7 @@
     grid-template-columns: minmax(auto, 936px);
     justify-content: center;
     background-color: #fafafa;
+    transition: .5s;
 
     .container {
       display: grid;

@@ -4,9 +4,20 @@
   const toggle = () => {
     style.darkMode = !style.darkmode;
 
+    let header = document.querySelector('.header-container');
     let main = document.querySelector('.main');
+    let profile = document.querySelector('.profile');
+    let stories = document.querySelector('.stories');
+    let cards = document.querySelectorAll('.card');
 
-    main.classList.toggle('dark-mode');
+    header.classList.toggle('header-dark');
+    main.classList.toggle('main-dark');
+    stories.classList.toggle('stories-dark');
+    profile.classList.toggle('profile-dark');
+
+    cards.forEach((card) => {
+      card.classList.toggle('card-dark');
+    });
   };
 </script>
 
@@ -22,7 +33,7 @@
     box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.2);
 
     &:checked {
-      background-color: #dc49a7;
+      background-color: #FA95A1;
 
       &:before {
         left: 30px;

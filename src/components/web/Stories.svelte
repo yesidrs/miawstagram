@@ -5,6 +5,7 @@
     margin: 1em 0;
     padding: 0.5em 1em;
     background-color: white;
+    transition: 0.5s;
 
     .container {
       .head {
@@ -81,9 +82,13 @@
               alt="profile"
             />
           </div>
-          <h2> 
+          <h2>
             nickname{i === 0 ? 1 : i + 1}
-            <span>{`${Math.floor(Math.random() * (10 - i + i)) + i} horas antes`}</span>
+            <span
+              >{`${
+                Math.floor(Math.random() * (10 - i + i)) + i
+              } horas antes`}</span
+            >
           </h2>
         </div>
       {/each}

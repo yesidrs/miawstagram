@@ -9,13 +9,13 @@
       const message = {
         id: Date.now(),
         text: msg,
-        username: 'Entwickler'
-      }
+        username: 'Entwickler',
+      };
 
       comments = [...comments, message];
       e.target.text.value = '';
     }
-  }
+  };
 </script>
 
 <style lang="scss">
@@ -59,6 +59,7 @@
           outline: none;
           width: 100%;
           display: flex;
+          transition: 0.5s;
         }
         button {
           border: none;
@@ -66,6 +67,7 @@
           font-size: 12px;
           outline: none;
           cursor: pointer;
+          transition: 0.5s;
         }
       }
     }
@@ -81,7 +83,7 @@
       </div>
     {/each}
     <div class="add">
-      <form on:submit|preventDefault={addComment} >
+      <form on:submit|preventDefault={addComment}>
         <input type="text" name="text" placeholder="Agregar Comentario..." />
         <button type="submit">Post</button>
       </form>
