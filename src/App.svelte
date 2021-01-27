@@ -4,7 +4,6 @@
   import Main from './components/layout/Main.svelte';
   import Sidebar from './components/layout/Sidebar.svelte';
   import TimeLine from './components/layout/TimeLine.svelte';
-  import DarkMode from './components/theme/DarkMode.svelte';
 
   let data = {};
   const API = 'https://kittygram-api.now.sh/';
@@ -18,8 +17,6 @@
 <style lang="scss">
   @import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400&family=Pacifico&display=swap');
 </style>
-
-<DarkMode />
 
 <Header />
 <Main>

@@ -1,3 +1,8 @@
+<script>
+
+import ProfileDark from "../theme/ProfileDark.svelte";
+
+</script>
 <style lang="scss">
   .profile {
     .content {
@@ -28,7 +33,9 @@
   }
 </style>
 
-<div class="profile">
+<ProfileDark />
+
+<div class="profile" id="profile">
   <div class="content">
     <div class="avatar">
       <img src="/img/profile.jpg" alt="profile" />

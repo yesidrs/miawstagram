@@ -1,3 +1,8 @@
+<script>
+
+import MainDark from "../theme/MainDark.svelte";
+
+</script>
 <style lang="scss">
   .main {
     display: grid;
@@ -6,7 +11,7 @@
     background-color: #fafafa;
     transition: .5s;
 
-    .container {
+    .main-container {
       display: grid;
       grid-template-columns: 3fr 1fr;
       grid-gap: 2em;
@@ -15,8 +20,10 @@
   }
 </style>
 
-<div class="main">
-  <div class="container">
+<MainDark />
+
+<div class="main" id="main">
+  <div class="main-container">
     <slot />
   </div>
 </div>

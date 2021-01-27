@@ -1,4 +1,5 @@
 <script>
+  import HeaderDark from '../theme/HeaderDark.svelte';
   import ThemeButton from '../utils/ThemeButton.svelte';
 </script>
 
@@ -13,7 +14,7 @@
       display: grid;
       justify-content: center;
       background-color: white;
-      box-shadow: 0px 8px 15px -9px rgba(0,0,0,0.2);;
+      box-shadow: 0px 8px 15px -9px rgba(0, 0, 0, 0.2);
       transition: 0.5s;
 
       .content {
@@ -73,7 +74,9 @@
   }
 </style>
 
-<div class="header">
+<HeaderDark />
+
+<div class="header" id="header">
   <div class="header-container">
     <div class="content">
       <div class="logo">

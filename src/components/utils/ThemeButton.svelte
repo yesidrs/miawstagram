@@ -1,22 +1,36 @@
 <script>
-  let style = { darkMode: false };
+  let darkMode = false;
 
   const toggle = () => {
-    style.darkMode = !style.darkmode;
+    darkMode = !darkMode;
 
-    let header = document.querySelector('.header-container');
-    let main = document.querySelector('.main');
-    let profile = document.querySelector('.profile');
-    let stories = document.querySelector('.stories');
-    let cards = document.querySelectorAll('.card');
+    let header = document.getElementById('header');
+    let main = document.getElementById('main');
+    let profile = document.getElementById('profile');
+    let stories = document.getElementById('stories');
+    let cards = document.querySelectorAll('#card');
+    let comments = document.querySelectorAll('#comments');
 
+    header.classList.toggle('header');
     header.classList.toggle('header-dark');
+
+    main.classList.toggle('main');
     main.classList.toggle('main-dark');
+
+    stories.classList.toggle('stories');
     stories.classList.toggle('stories-dark');
+
+    profile.classList.toggle('profile');
     profile.classList.toggle('profile-dark');
 
     cards.forEach((card) => {
+      card.classList.toggle('card');
       card.classList.toggle('card-dark');
+    });
+
+    comments.forEach((comment) => {
+      comment.classList.toggle('comments');
+      comment.classList.toggle('comments-dark');
     });
   };
 </script>
@@ -33,7 +47,7 @@
     box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.2);
 
     &:checked {
-      background-color: #FA95A1;
+      background-color: #fa95a1;
 
       &:before {
         left: 30px;

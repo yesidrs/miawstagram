@@ -1,4 +1,7 @@
 <script>
+import CommentsDark from "../theme/CommentsDark.svelte";
+
+
   export let comments = [];
 
   const addComment = (e) => {
@@ -74,7 +77,9 @@
   }
 </style>
 
-<div class="comments">
+<CommentsDark />
+
+<div class="comments" id="comments">
   <div class="content">
     {#each comments as comment}
       <div class="users">

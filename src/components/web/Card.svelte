@@ -3,6 +3,7 @@
   import Comments from './Comments.svelte';
   import Modal from '../utils/Modal.svelte';
   import Share from '../utils/Share.svelte';
+  import CardDark from '../theme/CardDark.svelte';
 
   export let post;
   let isModal = false;
@@ -20,7 +21,7 @@
     margin: 0 0 2em 0;
     transition: 0.5s;
 
-    .container {
+    .card-container {
       .header {
         display: flex;
         justify-content: space-between;
@@ -150,15 +151,17 @@
   }
 </style>
 
-<div class="card">
+<CardDark />
+
+<div class="card" id="card">
   {#if isModal}
     <div transition:blur>
       <Modal>
-        <Share on:click={handleClick}/>
+        <Share on:click={handleClick} />
       </Modal>
     </div>
   {/if}
-  <div class="container">
+  <div class="card-container">
     <div class="header">
       <div class="user">
         <img src={post.avatar} alt="" />

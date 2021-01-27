@@ -1,55 +1,52 @@
-<script>
-import StoriesDark from "../theme/StoriesDark.svelte";
-
-</script>
-
-
 <style lang="scss">
-  .stories {
-    border: 1px solid rgba(219, 219, 219, 1);
+  @import '../scss/variables.scss';
+
+  :global(.stories-dark) {
     border-radius: 4px;
     margin: 1em 0;
     padding: 0.5em 1em;
-    background-color: white;
+    background-color: $second;
     transition: 0.5s;
 
-    .stories-container {
-      .head {
+    :global(.stories-container) {
+      :global(.head) {
         display: flex;
         justify-content: space-between;
         align-items: center;
         padding: 0.5em 0 0 0;
-        h2 {
+        
+        :global(h2) {
           font-size: 12px;
+          color: $white;
           font-weight: 600;
         }
-        span {
+        :global(span) {
           font-size: 12px;
           font-weight: normal;
-          color: black;
+          color: $gray;
           cursor: pointer;
         }
       }
 
-      .items {
+      :global(.items) {
         margin: 0.5em 0 0.5em 0;
 
-        .item {
+        :global(.item) {
           display: flex;
           align-items: center;
           margin: 0 0 0.5em 0;
 
-          img {
+          :global(img) {
             width: 32px;
             height: 32px;
             border-radius: 50%;
           }
 
-          h2 {
+          :global(h2) {
             font-size: 14px;
-            color: black;
+            color: $white;
             margin: 0 0 0 0.5em;
-            span {
+            :global(span) {
               display: block;
               font-size: 9px;
               text-transform: uppercase;
@@ -57,7 +54,7 @@ import StoriesDark from "../theme/StoriesDark.svelte";
             }
           }
 
-          .item-box {
+          :global(.item-box) {
             width: 32px;
             height: 32px;
             border: double 2px transparent;
@@ -72,34 +69,3 @@ import StoriesDark from "../theme/StoriesDark.svelte";
     }
   }
 </style>
-
-<StoriesDark />
-
-<div class="stories" id="stories">
-  <div class="stories-container">
-    <div class="head">
-      <h2>Historias</h2>
-      <span>Ver todas</span>
-    </div>
-    <div class="items">
-      {#each Array(3) as _, i}
-        <div class="item">
-          <div class="item-box">
-            <img
-              src={`https://arepa.s3.amazonaws.com/elmo00${i + 2}.jpg`}
-              alt="profile"
-            />
-          </div>
-          <h2>
-            nickname{i === 0 ? 1 : i + 1}
-            <span
-              >{`${
-                Math.floor(Math.random() * (10 - i + i)) + i
-              } horas antes`}</span
-            >
-          </h2>
-        </div>
-      {/each}
-    </div>
-  </div>
-</div>
