@@ -1,3 +1,8 @@
+<script>
+
+import ThemeButton from "../utils/ThemeButton.svelte";
+
+</script>
 <style lang="scss">
   .header {
     background-color: white;
@@ -71,6 +76,7 @@
       </div>
       <div class="nav">
         <ul>
+          <li><ThemeButton /></li>
           <li><i class="fas fa-heart" /></li>
           <li><i class="fas fa-user-alt" /></li>
         </ul>

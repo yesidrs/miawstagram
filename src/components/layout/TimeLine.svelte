@@ -1,5 +1,5 @@
 <script>
-  import Card from './Card.svelte';
+  import Card from '../web/Card.svelte';
 
   export let posts = [];
 </script>

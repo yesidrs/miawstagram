@@ -1,9 +1,9 @@
 <script>
-  import Header from './components/Header.svelte';
-  import Main from './components/Main.svelte';
-  import TimeLine from './components/TimeLine.svelte';
-  import Sidebar from './components/Sidebar.svelte';
   import { onMount } from 'svelte';
+  import Header from './components/layout/Header.svelte';
+  import Main from './components/layout/Main.svelte';
+  import Sidebar from './components/layout/Sidebar.svelte';
+  import TimeLine from './components/layout/TimeLine.svelte';
 
   let data = {};
   const API = 'https://kittygram-api.now.sh/';
@@ -30,6 +30,6 @@
 
 <Header />
 <Main>
-  <TimeLine posts={data.posts}/>
+  <TimeLine posts={data.posts} />
   <Sidebar />
 </Main>
