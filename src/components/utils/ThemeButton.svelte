@@ -1,8 +1,22 @@
 <script>
-  let darkMode = false;
+  import { onMount } from 'svelte';
 
-  const toggle = () => {
-    darkMode = !darkMode;
+  let style = { darkMode: false };
+  const darkmode = localStorage.getItem('theme-dark');
+
+  onMount(() => {
+    setTimeout(() => {
+      const btn = document.querySelector('.toggle');
+      if (darkmode == 'true') {
+        btn.click();
+      } else {
+        return;
+      }
+    }, 1500);
+  });
+
+  const toggle = async () => {
+    style.darkMode = !style.darkMode;
 
     let header = document.getElementById('header');
     let main = document.getElementById('main');
@@ -32,6 +46,8 @@
       comment.classList.toggle('comments');
       comment.classList.toggle('comments-dark');
     });
+
+    localStorage.setItem('theme-dark', style.darkMode);
   };
 </script>
 

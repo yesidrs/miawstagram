@@ -6,10 +6,17 @@
   import CardDark from '../theme/CardDark.svelte';
 
   export let post;
+
   let isModal = false;
+  let like = false;
+  let bookmark = false;
 
   const handleClick = () => {
     isModal = !isModal;
+  };
+
+  const handleLike = () => {
+    like = !like;
   };
 </script>
 
@@ -114,39 +121,39 @@
         }
       }
     }
-  }
 
-  // .active-like {
-  //   color: #bc1888;
-  //   animation: bounce linear 0.8s;
-  //   animation-iteration-count: 1;
-  //   transform-origin: 20% 20%;
-  // }
-  // .active-bookmark {
-  //   color: #f09433;
-  // }
+    .active-like {
+      color: #bc1888;
+      animation: bounce linear 0.8s;
+      animation-iteration-count: 1;
+      transform-origin: 20% 20%;
+    }
+    .active-bookmark {
+      color: #f09433;
+    }
 
-  @keyframes bounce {
-    0% {
-      transform: translate(0px, 0px);
-    }
-    15% {
-      transform: translate(0px, -25px);
-    }
-    30% {
-      transform: translate(0px, 0px);
-    }
-    45% {
-      transform: translate(0px, -15px);
-    }
-    60% {
-      transform: translate(0px, 0px);
-    }
-    75% {
-      transform: translate(0px, -5px);
-    }
-    100% {
-      transform: translate(0px, 0px);
+    @keyframes bounce {
+      0% {
+        transform: translate(0px, 0px);
+      }
+      15% {
+        transform: translate(0px, -25px);
+      }
+      30% {
+        transform: translate(0px, 0px);
+      }
+      45% {
+        transform: translate(0px, -15px);
+      }
+      60% {
+        transform: translate(0px, 0px);
+      }
+      75% {
+        transform: translate(0px, -5px);
+      }
+      100% {
+        transform: translate(0px, 0px);
+      }
     }
   }
 </style>
@@ -177,11 +184,15 @@
     </div>
     <div class="icons">
       <div class="icons-first">
-        <i class="fa fa-heart" />
+        <i class="fa fa-heart" class:active-like={like} on:click={handleLike} />
         <i class="fa fa-paper-plane" on:click={handleClick} />
       </div>
       <div class="icons-second">
-        <i class="fa fa-bookmark" />
+        <i
+          class="fa fa-bookmark"
+          class:active-bookmark={bookmark}
+          on:click={() => (bookmark = !bookmark)}
+        />
       </div>
     </div>
     <div class="description">
