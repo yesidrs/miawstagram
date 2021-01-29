@@ -1,6 +1,7 @@
 <script>
   import HeaderDark from '../theme/HeaderDark.svelte';
   import ThemeButton from '../utils/ThemeButton.svelte';
+  import { likeCount } from '../store/store.js';
 </script>
 
 <style lang="scss">
@@ -85,6 +86,7 @@
       <div class="nav">
         <ul>
           <li><ThemeButton /></li>
+          <li>{$likeCount === 0 ? '' : $likeCount}</li>
           <li><i class="fas fa-heart" /></li>
           <li><i class="fas fa-user-alt" /></li>
         </ul>

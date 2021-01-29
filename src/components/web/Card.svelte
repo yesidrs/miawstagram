@@ -4,6 +4,7 @@
   import Modal from '../utils/Modal.svelte';
   import Share from '../utils/Share.svelte';
   import CardDark from '../theme/CardDark.svelte';
+  import { likeCount } from '../store/store.js';
 
   export let post;
 
@@ -17,6 +18,12 @@
 
   const handleLike = () => {
     like = !like;
+
+    if (like) {
+      likeCount.update(n => n + 1);
+    } else {
+      likeCount.update(n => n - 1);
+    }
   };
 </script>
 
@@ -131,30 +138,6 @@
     .active-bookmark {
       color: #f09433;
     }
-
-    @keyframes bounce {
-      0% {
-        transform: translate(0px, 0px);
-      }
-      15% {
-        transform: translate(0px, -25px);
-      }
-      30% {
-        transform: translate(0px, 0px);
-      }
-      45% {
-        transform: translate(0px, -15px);
-      }
-      60% {
-        transform: translate(0px, 0px);
-      }
-      75% {
-        transform: translate(0px, -5px);
-      }
-      100% {
-        transform: translate(0px, 0px);
-      }
-    }
   }
 </style>
 
@@ -180,7 +163,9 @@
       <div class="settings"><i class="fa fa-ellipsis-h" /></div>
     </div>
     <div class="photo">
-      <figure><img src={post.photo} alt="" /></figure>
+      <figure on:dblclick={handleLike}>
+        <img src={post.photo} alt={post.username} />
+      </figure>
     </div>
     <div class="icons">
       <div class="icons-first">

@@ -104,5 +104,15 @@
         }
       }
     }
+
+    :global(.active-like) {
+      color: #bc1888;
+      animation: bounce linear 0.8s;
+      animation-iteration-count: 1;
+      transform-origin: 20% 20%;
+    }
+    :global(.active-bookmark) {
+      color: #f09433;
+    }
   }
 </style>

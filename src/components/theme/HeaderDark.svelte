@@ -43,11 +43,11 @@
             :global(li) {
               display: inline-block;
               margin: 0 0 0 1em;
+              color: $white;
             }
 
             :global(i) {
               font-size: 16px;
-              color: $white;
               cursor: pointer;
             }
           }
